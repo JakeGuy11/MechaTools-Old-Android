@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    tools:context=".InputSpecs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/dSpecsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Robot\nSpecs"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsTeamInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsTeamLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team\nNumber"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/dSpecsTeamInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/dSpecsTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="# # # #"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsHeightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Robot Height"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/dSpecsHeightInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25" />
+
+                <EditText
+                    android:id="@+id/dSpecsInches"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:ems="10"
+                    android:hint="X X"
+                    android:inputType="number"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/dSpecsInchMarker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".0001"
+                    android:text="in"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsWeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsWeightLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Robot Weight"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/dSpecsWeightContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/dSpecsWeightInput"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:ems="10"
+                    android:hint="X X X"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/dSpecsLBSLabel"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".35"
+                    android:text="lbs"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsLanguageLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Code Language"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/dSpecsLanguageButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/dSpecsLanguageC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C++"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsLanguageJava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Java"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsLanguagePython"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Python"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsLanguageOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Other"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsExperience"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsExperienceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Driver Experience"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/dSpecsExperienceButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/dSpecsExperienceNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None (First Year Driving)"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsExperience1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1 Year Prior"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsExperience2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2 Years Prior"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/dSpecsExperience3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3+ Years Prior"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dAutoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dAutoLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autonomous Functionality"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/dHasAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Has Autonomous"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dShootsInAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shoots In Autonomous"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dReloadsInAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Picks Up More Balls In Auto"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecsAbilities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dSpecsAbilitiesBallLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Energy Cell Capabilities"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesCellBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Do Level 1 Power Ports"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesCellHex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Do Level 2 Power Ports"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesCellBullseye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Do Level 3 Power Ports"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/dSpecsAbilitiesWheelLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Control Panel Capabilitites"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesWheelSpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Spin Control Panel"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesWheelColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Adjust Wheel Colour"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesWheelUnder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Drive Under Control Panel"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/dSpecsAbilitiesClimbLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Climbing Capabilities"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesClimb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Climb"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesClimbBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Purposely Balance"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/dSpecsAbilitiesClimbLift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can Lift Other Robots"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:id="@+id/dComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dCommentLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:text="Extra Comments"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/dSpecsCommentsInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:ems="10"
+                android:hint="Extra Comments"
+                android:inputType="textShortMessage"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:id="@+id/dSpecExitContainers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dSpecsSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save And Push To Server" />
+
+            <Button
+                android:id="@+id/dSpecsExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Exit" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

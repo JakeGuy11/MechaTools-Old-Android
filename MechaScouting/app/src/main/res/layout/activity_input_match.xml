@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".InputMatch">
+
+    <LinearLayout
+        android:id="@+id/dRootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@color/colorAllianceBlue"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Switch
+            android:id="@+id/dRedMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red Mode"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/dCompWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dCompLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Competition Info"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/dCompInputWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2" />
+
+                <TextView
+                    android:id="@+id/dWeekLabel"
+                    android:layout_width="377dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".17"
+                    android:text="Week"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/dweekNum"
+                    android:layout_width="365dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".17"
+                    android:ems="10"
+                    android:hint="#"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2" />
+
+                <TextView
+                    android:id="@+id/dmatchLabel"
+                    android:layout_width="377dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".17"
+                    android:text="Match"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/dmatchNum"
+                    android:layout_width="365dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".17"
+                    android:ems="10"
+                    android:hint="#"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/dteamNumLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Team Number"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/dTeamWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/dteamNum"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="# # # #"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:id="@+id/dAuto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/dautonomousLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autonomous\nScoring"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/dAutoMoving"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/dAutoNothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Did Not Move / No Autonomous"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/dAutoMoved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Moved Off Starting Line"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/dAutoBottomCellsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Cells In Bottom Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dAutoBottomCellsButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dAutoBottomPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="AutoBottomPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dAutoBottomMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="AutoBottomMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dAutohexCells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Cells In Level 2 Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dAutoHexagonalButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dAutoHexPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="AutoHexPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dAutoHexMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="AutoHexMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dAutoBullseyeCells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Cells In Level 3 Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dAutoBullseyeButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dAutoBullseyePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="AutoBullseyePlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dAutoBullseyeMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="AutoBullseyeMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dTeleop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/dteleopLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teleoperated\nScoring"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dTeleopBottomCells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Cells In Bottom Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dTeleopBottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dTeleopBottomPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="TeleopBottomPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dTeleopBottomMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="TeleopBottomMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dTeleopHexCells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Power Cells In Level 2 Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dTeleopHexButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dTeleopHexPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="TeleopHexPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dTeleopHexMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="TeleopHexMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dTeleopBullseyeCells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Power Cells In Level 3 Port"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/dTeleopBullseyeButtons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dTeleopBullseyePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="TeleopBullseyePlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dTeleopBullseyeMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="TeleopBullseyeMinus"
+                    android:text="-" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:id="@+id/dTeleopConrolPanelBoxes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dTeleopControlPanelLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Control Panel Scoring"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/dTeleopControlPanelSpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wheel Was Spun (# Of Times)"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <CheckBox
+                    android:id="@+id/dTeleopControlPanelColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wheel Was Positioned At Colour"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <LinearLayout
+                android:id="@+id/dTeleopClimb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tBTeleopClimbLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Climbing Scores"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/dTeleopClimbButtonGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/dTeleopNoClimb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No Endgame / Parked"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/dTeleopLift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lifted Itself"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/dTeleopClimbBalanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finished Balanced"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <CheckBox
+                    android:id="@+id/dTeleopClimbLiftOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lifted Other Robot(s)"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dPenaltiesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dPenaltiesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penalties Of Any Kind"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/dPenaltiesButtonsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dPenaltiesPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="PenaltiesPlus"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dPenaltiesMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="PenaltiesMinus"
+                    android:text="-" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dMatchCommentLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:text="Extra Comments"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/dMatchCommentsInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".75"
+                android:ems="10"
+                android:hint="Extra Comments"
+                android:inputType="textShortMessage"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dSaveButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".75"
+                android:text="Save And Push To Server"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/dExitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:text="Exit"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ViewTeamStats">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dControlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dExitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".005"
+                android:background="@android:color/white"
+                android:text="Back"
+                android:textColor="@android:color/black" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".995" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Team XXXX"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="48sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+
+        <TextView
+            android:id="@+id/dSpecsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Robot Specs"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dHeightLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Height: XX in"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dWeightLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Weight: XXX lbs"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Code: XXXX"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dDriveLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Driver Experience: X years"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Extra Comments: XXXXX"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+
+        <TextView
+            android:id="@+id/dAbilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Robot Abilities"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dAutonomousLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Autonomous Abilities"
+            android:textAlignment="center"
+            android:textColor="@color/able"
+            android:textSize="28sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dhasAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Has Autonomous"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dshootsAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Shoots In Autonomous"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dPicksAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Picks Up In Autonomous"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dTeleopLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Teleop Abilities"
+            android:textAlignment="center"
+            android:textColor="@color/able"
+            android:textSize="28sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dBottomCells"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Fill Level 1"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dHexCells"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Fill Level 2"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dBullseyeCells"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Fill Level 3"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dSpinWheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Spin Control Panel"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dColorWheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Do Colour Wheel"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dUnderWheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Go Under Control Panel"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dClimb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Climb 3'"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dClimb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Climb Middle"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dClimb3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Climb 6'"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dCanBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Balance"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/dCanLift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Can Lift Other Bots"
+            android:textAlignment="center"
+            android:textColor="@color/unable"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50sp" />
+
+        <TextView
+            android:id="@+id/dAverageMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Average Match"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:typeface="sans" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dAutoGameLable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Autonomous"
+            android:textColor="@android:color/black"
+            android:textSize="28sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10sp" />
+
+        <TextView
+            android:id="@+id/dPercentAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Has Autonomous XX% Percent Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dAutoBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 1 Cells in Auto"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dAutoHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 2 Cells in Auto"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dAutoBullseye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 3 Cells in Auto"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dTeleGameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teleoperated"
+            android:textColor="@android:color/black"
+            android:textSize="28sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10sp" />
+
+        <TextView
+            android:id="@+id/dTeleBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 1 Cells in Teleop"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dTeleHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 2 Cells in Teleop"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dTeleBullseye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Level 3 Cells in Teleop"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dPercentSpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spins The Control Panel XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dPercentColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colours The Wheel XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dEndgameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endgame"
+            android:textColor="@android:color/black"
+            android:textSize="28sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10sp" />
+
+        <TextView
+            android:id="@+id/dPercentNoEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Has No Endgame XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dPercentClimb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Climbs XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dPercentBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finishes Balanced XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dPercentLift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lifts Others XX% Of The Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25sp" />
+
+        <TextView
+            android:id="@+id/dOtherLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other Info"
+            android:textColor="@android:color/black"
+            android:textSize="28sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10sp" />
+
+        <TextView
+            android:id="@+id/dPenalties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gets An Average Of XX Penalties"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extra Comments:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

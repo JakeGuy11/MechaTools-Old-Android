@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D87F45</color>
+    <color name="colorPrimaryDark">#CB3B32</color>
+    <color name="colorAccent">#DFB86D</color>
+    <color name="colorAllianceBlue">#4355A5</color>
+    <color name="colorAllianceRed">#DD1D24</color>
+</resources>

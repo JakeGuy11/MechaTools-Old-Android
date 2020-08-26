@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mecha Archives</string>
+    <string name="version">0.2.0</string>
+    <string name="ProvidedMessage">v0.2.0 Provided by Jake K</string>
+</resources>
